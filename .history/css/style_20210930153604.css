@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+:root{
+    --font1:'Birthstone', cursive;
+    --font2:'Ephesis', cursive;
+}
+body{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+ .main-title{
+     --size:50px;
+     background-color:rgb(170, 150, 124);
+     width:100vw;
+     height:50vh;
+     margin:0px;
+     font-size: var(--size);
+     text-align: center;
+     vertical-align: middle;
+ }
+ .main-title-1{
+     font-family: 'Times New Roman', Times, serif;
+ }
+ .main-title-2{
+     font-family: var(--font1);
+ }
+ .main-title-3{
+     
+ }
