@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=WindSong&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+:root{
+    --welcome-font:'WindSong', cursive;
+    --quote:'Work Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width:95vw;
+    background-color:rgba(255, 255, 255, 0.795);
+    padding:10px;
+    margin:auto;
+}
+.welcome{
+    background-color:rgb(26, 21, 0);
+    position: relative;
+    --width:calc(80vw - 40px);
+    margin:20px auto;
+    padding:30px;
+    width:max-content;
+    height:max-content;
+    /* border-radius:calc((100vw - 40px) / 2); */
+    /* box-shadow: 0 0 0 10vw rgb(49, 41, 4); */
+}
+.welcome .text-welcome{
+    --side-length:calc((var(--width) - 6 * 10px) / 8 );
+    --color:rgb(0, 217, 255);
+    background-color:rgba(255, 255, 255, 0.74);
+    padding:10px;
+    transform:translate(-30vw,calc(var(--side-length) * 2.5)) rotate(-90deg) ;
+    position:absolute;
+    
+}
+.welcome .text-welcome .text-wel{
+    text-align:right;
+    transform:translateX(-40px);
+    font-family: var(--welcome-font);
+    font-size:calc((var(--width) - 6 * 10px) / 12 );
+    font-weight: 900;
+    color:var(--color);
+}
+.welcome .text-welcome .text-underline{
+    width:calc(var(--side-length) * 6);
+    height:5px;
+    background-color:var(--color) ;
+}
+.welcome .quote{
+    --side-length:calc((var(--width) - 6 * 10px) / 8 );
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.788);
+    color:white;
+    font-family: var(--quote);
+    font-size:40px;
+    width:35vw;
+    padding:var(--side-length) 20px;
+    transform: translate(2.8vw,calc(var(--side-length) * 1.5));
+    z-index: 2;
+}
+.welcome .artist{
+    --side-length:calc((var(--width) - 6 * 10px) / 8 );
+    position: absolute;
+    background-color:white;
+    padding:15px 10px;
+    transform: translateY(calc(var(--side-length) * 5));
+}
+.welcome .artist .person{
+    font-size:1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+    padding-right:calc((var(--width) - 60px) / 10) ;
+}
+.welcome .artist .text-underline{
+    width:calc(var(--width) - 60px);
+    height:3px;
+    background-color: rgb(255, 208, 0);
+}
+.welcome .images{
+    --side-length:calc((var(--width) - 6 * 10px) / 12 );
+    display:grid;
+    grid-template-columns: repeat(12,var(--side-length));
+    grid-auto-rows: calc(var(--side-length) / 1.25 );
+     grid-gap: 10px;
+    grid-template-areas:
+    ". . .   abstract  abstract  abstract brain brain  brain . . ."
+    "creativity creativity creativity abstract abstract abstract brain brain brain linecolor linecolor linecolor"
+    "creativity creativity  creativity abstract abstract abstract brain brain brain linecolor linecolor linecolor"
+    "creativity creativity creativity .  surrealism surrealism surrealism face face face femalewarrior femalewarrior"
+    ". cubicles cubicles cubicles  surrealism surrealism surrealism face face face femalewarrior femalewarrior"
+    ". cubicles cubicles cubicles  surrealism surrealism surrealism . lotuspeople lotuspeople femalewarrior femalewarrior"
+    ".  cubicles cubicles cubicles . eye eye eye lotuspeople lotuspeople femalewarrior femalewarrior"
+    "woman woman woman woman woman eye eye eye lotuspeople lotuspeople ladder ladder"
+    "woman woman woman woman woman eye eye eye lotuspeople lotuspeople ladder ladder"
+    "woman woman woman woman woman  eye eye eye  . . ladder ladder"
+}
+
+.welcome .images figure{
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: .5vw solid white; */
+    border-radius:5px;
+}
+@media screen and (max-width:800px){
+    .welcome .text-welcome{
+        transform:translate(calc(-1 *(80vw - 100px)),calc(var(--side-length) * 6)) rotate(-90deg) ;
+    }
+    .welcome .text-welcome .text-wel{
+        font-size:calc((var(--width) - 6 * 10px) / 8 );
+    }
+    .welcome .text-welcome .text-underline{
+        width:calc(var(--side-length) * 15);
+    }
+    .welcome .quote{
+        font-size:5vw;
+    }
+    .welcome .artist{
+        transform: translateY(calc(var(--side-length) * 11));
+    }
+    .welcome .images{
+        --side-length:calc((var(--width) - 6 * 10px) / 8 );
+        display:grid;
+        grid-template-columns: repeat(8,var(--side-length));
+        grid-auto-rows: calc(var(--side-length) );
+        grid-gap: 10px;
+        grid-template-areas: 
+        ". cubicles cubicles linecolor linecolor linecolor linecolor ."
+        ". cubicles cubicles linecolor linecolor linecolor linecolor ."
+        "face face face face face femalewarrior femalewarrior femalewarrior"
+        "face face face face face femalewarrior femalewarrior femalewarrior"
+        "creativity creativity creativity abstract abstract femalewarrior femalewarrior femalewarrior"
+        "creativity creativity creativity abstract abstract femalewarrior femalewarrior femalewarrior"
+        ". . lotuspeople lotuspeople surrealism surrealism surrealism surrealism"
+        "brain brain lotuspeople lotuspeople surrealism surrealism surrealism surrealism"
+        "brain brain lotuspeople lotuspeople eye eye eye ."
+        "woman woman woman woman eye eye eye ."
+        "woman woman woman woman ladder ladder ladder ."
+        ". . . . ladder ladder ladder ."
+        ;
+    }
+    .welcome .images figure{
+        border-radius:3px;
+    }
+}
+.img-1{
+    background-image: url("../images/art images/abstract.jpeg");
+    grid-area: abstract;
+}
+.img-2{
+    background-image: url("../images/art images/brain.jpeg");
+    grid-area: brain;
+}
+.img-3{
+    background-image: url("../images/art images/linecolor.jpg");
+    grid-area: linecolor;
+}
+.img-4{
+    background-image: url("../images/art images/creativity-illo.jpg");
+    grid-area: creativity;
+}
+.img-5{
+    background-image: url("../images/art images/face.jpeg");
+    grid-area: face;
+}
+.img-6{
+    background-image: url("../images/art images/femalewarrior.jpeg");
+    grid-area: femalewarrior;
+}
+.img-7{
+    background-image: url("../images/art images/lotuspeople.jpeg");
+    grid-area: lotuspeople;
+}
+.img-8{
+    background-image: url("../images/art images/cubicles.jpeg");
+    grid-area: cubicles;
+}
+.img-9{
+    background-image: url("../images/art images/Surrealism-Art.jpg");
+    grid-area: surrealism;
+}
+.img-10{
+    background-image: url("../images/art images/ladder.jpeg");
+    grid-area: ladder;
+}
+.img-11{
+    background-image: url("../images/art images/woman.jpeg");
+    grid-area: woman;
+}
+.img-12{
+    background-image: url("../images/art images/eye.jpeg");
+    grid-area:eye;
+}
