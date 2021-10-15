@@ -8,3 +8,9 @@ menuIcon.addEventListener("click",()=>{
     bar[2].classList.toggle("anim-rot-45a");
     menuMobile.classList.toggle("anim-mobile-right");
 })
+
+if(window.innerWidth >= 1251){
+    // console.log('aaa');
+    let tipsHeader=document.querySelector(".tips .tips_container .tips-header");
+    tipsHeader.innerHTML='<p><span>T</span>IPS OF THE <br><span>WEEK</span></p>';
+}
