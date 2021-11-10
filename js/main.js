@@ -14,3 +14,23 @@ if(window.innerWidth >= 1251){
     let tipsHeader=document.querySelector(".tips .tips_container .tips-header");
     tipsHeader.innerHTML='<p><span>T</span>IPS OF THE <br><span>WEEK</span></p>';
 }
+
+let loginlink=document.getElementById("loginlink");
+let login=document.getElementById("login");
+let X1=document.getElementById("X1");
+loginlink.addEventListener('click', ()=>{
+    login.style.display='block';
+})
+X1.addEventListener('click', ()=>{
+    login.style.display='none';
+})
+
+let signuplink=document.getElementById("signuplink");
+let signup=document.getElementById("signup");
+let X2=document.getElementById("X2");
+signuplink.addEventListener('click', ()=>{
+    signup.style.display='block';
+})
+X2.addEventListener('click', ()=>{
+    signup.style.display='none';
+})
