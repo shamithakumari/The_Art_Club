@@ -34,3 +34,25 @@ signuplink.addEventListener('click', ()=>{
 X2.addEventListener('click', ()=>{
     signup.style.display='none';
 })
+
+let signupform=document.forms["signupform"];
+let wrong=document.querySelectorAll("#signup .loginform .wrong");
+function signupvalidate(){
+    let pwd=signupform["password"].value;
+    let confirmpwd=signupform["confirmpassword"].value;
+    wrong[0].style.display='none';
+    wrong[1].style.display='none';
+    if(pwd.length<8){
+        wrong[0].innerHTML="Password must aleast be of 8 characters";
+        wrong[0].style.display="block";
+        return false;
+    }
+    else if(pwd != confirmpwd){
+        wrong[1].innerHTML="Password doesn't match";
+        wrong[1].style.display='block';
+        return false;
+    }
+    else{
+        return true;
+    }
+}

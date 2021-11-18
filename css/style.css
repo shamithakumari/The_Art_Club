@@ -113,7 +113,7 @@ nav.nav-bar div.links a{
     transform: translate(-50%,-50%);
     padding:20px;
     border-radius: 10px;
-    box-shadow: 0 0 0 100vw var(--color),0 0 0 100vh var(--color);
+    box-shadow: 0 0 0 100vw var(--color),0 0 0 100vw var(--color),0 0 0 100vh var(--color);
 }
 .login div.X{
     position:relative;
@@ -130,13 +130,13 @@ nav.nav-bar div.links a{
     text-align: center;
     margin:10px;
 }
-.login #loginform{
+.login .loginform{
     margin:20px 1vw 10px 1vw;
 }
-.login #loginform .inputlogin{
+.login .loginform .inputlogin{
     margin:2vh 0;
 }
-.login #loginform .inputlogin input{
+.login .loginform .inputlogin input{
     width:100%;
     font-weight: 600;
     font-family: var(--font4);
@@ -147,10 +147,10 @@ nav.nav-bar div.links a{
     font-size: 16px;
     background-color:rgb(231, 231, 231);
 }
-.login #loginform .inputlogin input:focus{
+.login .loginform .inputlogin input:focus{
     outline: none;
 }
-.login #loginform .submitbutton{
+.login .loginform .submitbutton{
     width:100%;
     margin:10px 0 5px 0;
     padding:2vh 0;
@@ -173,6 +173,17 @@ nav.nav-bar div.links a{
 }
 .login #forgotpwd:hover{
     color:var(--text-shade);
+}
+
+.wrong{
+    background-color:rgb(230, 36, 94);
+    padding:5px;
+    margin-top:-5px;
+    font-size:12px;
+    font-family: var(--font4);
+    font-weight: bold;
+    display: none;
+    overflow-wrap: wrap;
 }
   
 /* Title */
