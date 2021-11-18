@@ -26,7 +26,7 @@ for(let i=0;i<artpics.length-1;i++){ //artpics.length-1 since there's an already
 
 let imageContainers=document.querySelectorAll('.image-containers .container');
 imageContainers.forEach((element,index)=>{
-    element.style.backgroundImage=`url(${artpics[index]})`;
+    element.style.backgroundImage=`url('${artpics[index]}')`;
     // console.log(element.children);
     element.children[0].children[1].children[0].textContent=arttitles[index];
     element.children[0].children[2].children[1].textContent=artists[index];
