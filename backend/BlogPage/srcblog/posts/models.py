@@ -6,7 +6,7 @@ from datetime import datetime
 
 class Post(models.Model):
     title = models.CharField(max_length=25)
-    # image= models.ImageField(upload_to='images/')
+    image= models.ImageField(upload_to='images/')
    # name=models.ForeignKey(User,on_delete=models.CASCADE);
     description=models.CharField(max_length=255)
     author=models.CharField(max_length=30)

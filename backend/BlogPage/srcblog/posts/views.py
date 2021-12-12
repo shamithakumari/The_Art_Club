@@ -13,11 +13,10 @@ def create_post(request):
     if request.method == 'POST':
         author=request.POST['author']
         title=request.POST['title']
-        # is_private = request.POST.get('is_private', False)
-        # image=request.POST['image']
+        image=request.FILES['image']
         description=request.POST['description']
         content=request.POST['content']
-        posts=Post(author=author,title=title,description=description,content=content)
+        posts=Post(author=author, title=title, image=image, description=description, content=content)
         posts.save()
         return render(request,'uploadsuccess.html')
 
