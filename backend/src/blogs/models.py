@@ -12,7 +12,8 @@ class Post(models.Model):
     author=models.CharField(max_length=30)
     content=models.TextField()
     #published_date =datetime.strptime('04-12-2014', '%d-%m-%Y').date()
-    published_date = models.DateTimeField(auto_now_add=True,blank=True, null=True)
+    # published_date = models.DateTimeField(auto_now_add=True,blank=True, null=True)
+    published_date =datetime.now().date()
 
     def __str__(self):
         return self.title+' : '+str(self.author)

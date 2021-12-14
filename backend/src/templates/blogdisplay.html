@@ -22,6 +22,7 @@
           <div class="author">
           <p id="aname"><b>{{post.author}}</b></p>
           <p id="ddate">{{post.published_date}}</p>
+          <!-- <p id="content">{{post.content}}</p> -->
           </div>
           
         </div>
@@ -85,31 +86,31 @@
      
        
         <div class="close">X</div>
-        
-        <form class="addart-actualform" action="/create/" method="post" enctype="multipart/form-data">
+       
+        <div class="form_container">
+        <form  action="/create/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <!-- <br><br><br> -->
             <!-- <div class="upload_post_container"> -->
             <h1>Post a blog</h1>
-            <div class="first_block">
             
-            <br>
-              <div class="form-group">
-                <label for="name">Name:</label>
+            
+            <div class="first_block>
+
+              <label for="name">Name:</label>
               <input type="text" name="author" id="caption" class="form-controll" required/>
-              </div>
+            
     
-            <div class="form-group">
               <label for="title" id="titlel">Title:</label>
               <input type="text" name="title" id="title" class="form-controll" required/>
-            </div>
-          </div>
-          <div class="second_block">
-            <div class="form-group">
+           
+            
+        
+            
                 <label for="caption">Description:</label>
                 <input type="text" name="description" id="caption" class="form-controll" required/>
-              </div>
-    
+              
+             
               <div class="form-group file-area">
                 <label for="images" id="imagel">Images:<span>(Images should 400x300 wide)</span></label>
             <input type="file" name="image"  id="images" required="required"/>
@@ -118,23 +119,25 @@
               <div class="default">Please upload an image</div>
             </div> 
           </div>
-    </div>
-    <div class="content_block">
-             <div class="form-group">
+     </div>
+     
+            <div class="content_block">
+             
               <label for="caption">Content </label>
               <br>
-              <input type="text" name="content" id="captionc" class="form-controll" required/>
-            </div>
-        </div> 
-      <!-- </div>   -->
-        <div class="upload_btnblock"> 
+              <textarea name="content" cols="50" rows="10" id="content" required></textarea>
+            
+          </div>
+
+        </div>
             <div class="form-group form-button">
               <button type="submit">Upload</button>
               <div class="hoverbar"></div>
             </div>
-          </div> 
+         
           
           </form>
-    </div> 
+         
+      </div>
 </body>
 </html>
