@@ -3,10 +3,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
 from blogs.views import create_post
+from .views import render_home_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('blogs.urls')),
+    path('blogs/',include('blogs.urls')),
+    path('',render_home_page),
     path('create/',create_post),
 ]
 
