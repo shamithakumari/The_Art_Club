@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogs'
+    'blogs',
+    'prints',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +122,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'), ]
+STATIC_ROOT = BASE_DIR / 'static_root'
 
+# VENV_PATH = Path(BASE_DIR).parent
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+# MEDIA_ROOT = VENV_PATH / 'media_root'
+# MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

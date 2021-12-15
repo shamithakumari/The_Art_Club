@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 
 from .forms import UserLoginForm, UserRegistrationForm
+from cart.views import no_of_contents
 
 
 def signup_view(request):
@@ -58,5 +59,10 @@ def logout_view(request):
     url= request.GET.get('url')
     return redirect(url)
 
-def render_home_page(request):
-    return render(request,'uploadsuccess.html')
+def index(request):
+    data ={}
+    data['no_of_contents']= no_of_contents(request.user)
+    return render(request,'index.html',data)
+
+# def render_home_page(request):
+#     return render(request,'uploadsuccess.html')

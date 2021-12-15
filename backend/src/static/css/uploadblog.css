@@ -47,9 +47,9 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
     cursor: pointer;
-    
+
   }
-  
+
 .form_container{
     display: flex;
     flex-direction: row;
@@ -75,23 +75,23 @@
     border: 2px dashed rgba(255,255,255,0.2);
     text-align: center;
     transition: background 0.3s ease-in-out;
-   
+
   }
   .file-dummy .success {
     display: none;
-  
+
   }
-  
-  
+
+
   .file-dummy:hover .file-dummy {
   background: rgba(255,255,255,0.1);
   }
-  
+
   input[type=file]:focus + .file-dummy {
   outline: 2px solid rgba(255,255,255,0.5);
   outline: -webkit-focus-ring-color auto 5px;
   }
-  
+
   input[type=file]:valid + .file-dummy {
   border-color: rgba(0,255,0,0.4);
   background-color: rgba(0,255,0,0.3);
@@ -105,7 +105,7 @@
   .file-area {
     max-width: 100%;
     position: relative;
-  } 
+  }
   .file-area  input[type=file] {
       margin-left:10px;
       position: absolute;
@@ -117,35 +117,35 @@
       bottom: 0;
       opacity: 0;
   }
-   
+
   .form-group {
     margin:5px;
     font-size: 18px;
     font-family: var(--font1);
     color:var(--background-shade);
-    
+
   }
   .form-group span{
     font-size: 16px;
     font-weight:100;
     text-align: right;
     font-style: italic;
-     /* margin-left:20px; */ 
+     /* margin-left:20px; */
   }
   /*.form-group input[type=text]{
     font-family: var(--font1);
-    /* font-weight: 600; 
+    /* font-weight: 600;
   }
   .form-controll {
-    /* display: block; 
-    padding: 8px 0 8px 8px; 
-    /* width:100%; 
+    /* display: block;
+    padding: 8px 0 8px 8px;
+    /* width:100%;
     font-size: 15px;
     background-color: rgba(209, 204, 204, 0.911);
     border: 1px solid rgba(255, 255, 255, 0.288);
-    /* color: #fff; 
+    /* color: #fff;
     font-weight: 200;
-  } 
+  }
   .form-controll:focus {
     outline: 1px solid rgba(255,255,255,0.5);
     outline: -webkit-focus-ring-color auto 5px;
@@ -155,7 +155,7 @@
     align-self: left;
   }
   .form-button .hoverbar{
-    padding-left:0px; 
+    padding-left:0px;
     width:100%;
     transform: scale(0);
     height:1.5px;
@@ -163,9 +163,9 @@
     transition: transform .3s ease-in-out;
     background-color:  #053777;
   }*/
-  
+
   /*from here i commented*/
-  
+
 .form-group label{
     margin:5px;
     font-size: 18px;
@@ -173,7 +173,7 @@
     color:var(--background-shade);
     /* font-weight:600; */
   }
-  
+
   .form-group span{
     font-size: 16px;
     font-weight:100;
@@ -181,15 +181,15 @@
     font-style: italic;
     /* margin-left:20px; */
   }
-  
+
   .form-group input[type=text]{
     font-family: var(--font1);
-    /* font-weight: 600;*/ 
+    /* font-weight: 600;*/
   }
   .file-area {
     max-width: 100%;
     position: relative;
-  } 
+  }
   .file-area  input[type=file] {
       margin-left:10px;
       position: absolute;
@@ -202,7 +202,7 @@
       opacity: 0;
       cursor: pointer;
     }
-    
+
     .file-dummy {
       width: 100%;
       padding: 30px 0;
@@ -212,22 +212,22 @@
       border: 2px dashed rgba(255,255,255,0.2);
       text-align: center;
       transition: background 0.3s ease-in-out;
-      
+
     }
     .file-dummy .success {
         display: none;
      }
-    
-    
+
+
     .file-dummy:hover .file-dummy {
       background: rgba(255,255,255,0.1);
     }
-    
+
     input[type=file]:focus + .file-dummy {
       outline: 2px solid rgba(255,255,255,0.5);
       outline: -webkit-focus-ring-color auto 5px;
     }
-    
+
     input[type=file]:valid + .file-dummy {
       border-color: rgba(0,255,0,0.4);
       background-color: rgba(0,255,0,0.3);
@@ -238,8 +238,8 @@
     input[type=file]:valid + .file-dummy  .default {
         display: none;
   }
-  
-  
+
+
   .form-controll {
     display: block;
     padding: 8px 0 8px 8px;
@@ -249,7 +249,7 @@
     border: 1px solid rgba(255,255,255,0.3);
     /* color: #fff; */
     font-weight: 200;
-  }  
+  }
   .form-controll:focus {
       outline: 1px solid rgba(255,255,255,0.5);
       outline: -webkit-focus-ring-color auto 5px;
@@ -262,16 +262,16 @@
     font-size: 16px;
     background-color: rgba(209, 204, 204, 0.911);
     border: 1px solid rgba(255,255,255,0.3);
-    /* color: #fff; 
+    /* color: #fff;
     font-weight: 200;
   } */
   .form-button{
     width:max-content;
     align-self: left;
   }
-  
+
   .form-button .hoverbar{
-     padding-left:0px; 
+     padding-left:0px;
     width:100%;
     transform: scale(0);
     height:1.5px;
@@ -279,11 +279,11 @@
     transition: transform .3s ease-in-out;
     background-color:  #053777;
   }
-  
+
   .form-button:hover .hoverbar{
     transform: scale(1);
   }
-  
+
   button {
     padding: 8px 10px 0 10px;
     background: rgba(255,255,255,0.8);
@@ -295,12 +295,11 @@
     text-shadow: 0 1px 2px #fff;
     cursor: pointer;
   }
-  
-  
+
+
   .form-group {
     max-width: 500px;
     margin: auto;
     margin-bottom: 30px;
   }
-   
-  
+
