@@ -31,4 +31,7 @@ class PostDetails(DetailView):
 
 
 
+
+
+
     
