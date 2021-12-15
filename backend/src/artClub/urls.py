@@ -15,6 +15,7 @@ urlpatterns = [
     path('', index),
     path('prints/',include('prints.urls')),
     path('cart/', include('cart.urls')),
+    path('gallery/', include('gallery.urls')),
     # path('',render_home_page),
     path('create/',create_post),
 ]
