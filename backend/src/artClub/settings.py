@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'theArtClub.urls'
+ROOT_URLCONF = 'artClub.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'theArtClub.wsgi.application'
+WSGI_APPLICATION = 'artClub.wsgi.application'
 
 
 # Database

@@ -4,9 +4,13 @@ from django.contrib import admin
 from django.urls import path,include
 from blogs.views import create_post
 from .views import render_home_page
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signup/', signup_view),
+    path('login/', login_view),
+    path('logout/',logout_view),
     path('blogs/',include('blogs.urls')),
     path('',render_home_page),
     path('create/',create_post),
