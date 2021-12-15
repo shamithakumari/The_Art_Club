@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "bloghead.html" %}
+    <title>Gallery</title>
+
+</head>
+
+<body>
+  
+    <div class="search">
+        <form action="#" method="get">
+            <input type="text" placeholder="Search for the Artist...">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
+
+    <div class="image-display">
+        <div class="close"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+        <div class="image-fulldisplay">
+            <img src="" alt="art1">
+        </div>
+    </div>
+
+    <div class="image-containers">
+        {% load static %}
+        {% for gallery in galleries %}
+        <div class="container" id="{{gallery.id}}">
+            <script>
+                var container = document.getElementById('{gallery.id}}');
+                container.style.backgroundImage = `url('{{gallery.gallery_image.url}}')`;
+            </script>
+            <div class="overlay">
+                <div class="art heart">
+                    <!-- <i class="fa fa-heart-o nofill" aria-hidden="true"></i> -->
+                    <!-- <i class="fa fa-heart fill" aria-hidden="true"></i> -->
+                </div>
+                <div class="art title">
+                    <p>{{gallery.title}}</p>
+                    <hr>
+                </div>
+                <div class="art artby">
+                    <div class="first">Art By:</div>
+                    <div class="second">{{gallery.artist.first_name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+{% endfor %}
+    <div class="addart">
+        <i class="fa fa-plus fa-1" aria-hidden="true"></i>
+    </div>
+
+    <div class="addart-form">
+        <div class="close">X</div>
+        <form class="addart-actualform" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" class="form-controll" required/>
+            </div>
+            <div class="form-group">
+              <label for="caption">Your name  <span>(Artist name)</span></label>
+              <input type="text" name="caption" id="caption" class="form-controll" required/>
+            </div>
+            
+            <div class="form-group file-area">
+                  <label for="images">Images  <span>(Your images should be at least 400x300 wide and less than 1MB)</span></label>
+              <input type="file" name="images" id="images" required="required" accept="image/*" />
+              <div class="file-dummy">
+                <div class="success">Great, your file is selected.</div>
+                <div class="default">Please upload an image</div>
+              </div>
+            </div>
+            
+            <div class="form-group form-button">
+              <button type="submit">Upload your art</button>
+              <div class="hoverbar"></div>
+            </div>
+            
+          </form>
+             
+          
+    </div>
+</body>
+
+</html>

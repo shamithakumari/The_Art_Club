@@ -1,3 +1,4 @@
+/* $bg: #FEF5DF; */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
@@ -16,11 +17,25 @@
   --font4:'Work Sans', sans-serif;
 }
 
-body {
+* {
   /* background-color: $bg; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.nocontent{
+  font-size:30px;
+  font-family: var(--font4);
+  padding:20px 20px;
+ text-align: center;
+}
+
+main {
+  width:100vw;
+  background-color:rgb(255, 255, 255);
+  padding:30px 10px;
+  margin:auto;
 }
 
 .search{
@@ -39,6 +54,9 @@ body {
 }
 .search button{
   font-size: 16px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .image-containers{
@@ -124,6 +142,7 @@ body {
 
 
 .artby {
+  margin-top:10px;
   font-size: 20px;
   line-height: 10px;
   font-weight: bold;
@@ -138,7 +157,7 @@ body {
     width:max-content;
     height:max-content;
     padding:5% 5% 5% 1%;
-    margin:0 0 7% 0;
+    margin:0 0 5% 0;
     font-family: var(--font22);
     font-size: 22px;
 }
@@ -146,7 +165,9 @@ body {
     font-style: italic;
     font-weight: normal;
     font-family: var(--font1);
+    margin:0 0 5% 0;
 }
+
 
 .container:hover .overlay {
   opacity: 1;
@@ -171,7 +192,7 @@ body {
    position:fixed;
    width:100vw;
    height:100vh;
-   z-index:3!important;
+   z-index:10!important;
    background-color:white;
    top:0;
    transform: scaleY(0);
@@ -192,7 +213,7 @@ body {
 
 .image-display .image-fulldisplay{
   display:flex;
-  justify-content:center;
+  justify-content:space-around;
   position: absolute;
   /* z-index: 3; */
   top:50%;
@@ -232,7 +253,7 @@ body {
   width:100vw;
   height:100vh;
   top:0;
-  z-index:4;
+  z-index:10;
   background-color:white;
   justify-content:center;
   align-items:center;
@@ -240,13 +261,10 @@ body {
   transform: scaleY(0);
   transition:transform .5s ease-in-out;
   transform-origin:bottom ;
-  /*display: none; */
-
 }
 
 .addart-form-show{
   transform: scaleY(1)!important;
-
 }
 
 .addart-form .close{
@@ -255,6 +273,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size:25px;
   cursor: pointer;
+
   
 }
 /*.upload_post_container{
@@ -341,18 +360,9 @@ background: rgba(255,255,255,0.1);
 input[type=file]:focus + .file-dummy {
 outline: 2px solid rgba(255,255,255,0.5);
 outline: -webkit-focus-ring-color auto 5px;
+
 }
 
-input[type=file]:valid + .file-dummy {
-border-color: rgba(0,255,0,0.4);
-background-color: rgba(0,255,0,0.3);
-}
-input[type=file]:valid + .file-dummy .success {
-  display: inline-block;
-}
-input[type=file]:valid + .file-dummy  .default {
-  display: none;
-}
 
 .file-area {
   max-width: 100%;
@@ -426,7 +436,8 @@ input[type=file]:valid + .file-dummy  .default {
   font-size:25px;
   cursor: pointer;
 }
- .form-group label{
+ 
+.form-group label{
   margin:5px;
   font-size: 18px;
   font-family: var(--font1);
@@ -444,7 +455,7 @@ input[type=file]:valid + .file-dummy  .default {
 
 .form-group input[type=text]{
   font-family: var(--font1);
-  /* font-weight: 600;*/ 
+  /* font-weight: 600; */
 }
 .file-area {
   max-width: 100%;
@@ -503,7 +514,7 @@ input[type=file]:valid + .file-dummy  .default {
 .form-controll {
   display: block;
   padding: 8px 0 8px 8px;
-  width:100%;
+  width: 100%;
   font-size: 16px;
   background-color: rgba(209, 204, 204, 0.911);
   border: 1px solid rgba(255,255,255,0.3);
@@ -514,40 +525,29 @@ input[type=file]:valid + .file-dummy  .default {
     outline: 1px solid rgba(255,255,255,0.5);
     outline: -webkit-focus-ring-color auto 5px;
 }
-/* #conid{
-  width:500px;
-  height:80px;
-  display: block;
-  padding: 8px 0 8px 8px;
-  font-size: 16px;
-  background-color: rgba(209, 204, 204, 0.911);
-  border: 1px solid rgba(255,255,255,0.3);
-  /* color: #fff; 
-  font-weight: 200;
-} */
 .form-button{
   width:max-content;
   align-self: left;
 }
 
 .form-button .hoverbar{
-   padding-left:0px; 
+  /* padding-left:0px; */
   width:100%;
   transform: scale(0);
   height:1.5px;
   margin-top: 3px;;
   transition: transform .3s ease-in-out;
-  background-color:  #053777;
+  background-color:  var(--background-shade);
 }
 
 .form-button:hover .hoverbar{
   transform: scale(1);
 }
 
-button {
+.form-button button{
   padding: 8px 10px 0 10px;
   background: rgba(255,255,255,0.8);
-  color: #053777;
+  color: var(--background-shade);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 13px;
@@ -562,11 +562,4 @@ button {
   margin: auto;
   margin-bottom: 30px;
 }
-.form_container{
-  min-height: 300px;
-  overflow-y:auto;
-} 
-#content{
-  resize: none;
-  white-space: pre-wrap;
-}
+
