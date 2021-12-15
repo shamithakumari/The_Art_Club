@@ -55,17 +55,17 @@ body {
 .container {
   width: 300px;
   height: 300px;
-  
+
   position: relative;
   /* top:0; right: 0; left: 0; bottom: 0; */
   margin: auto;
-  
+
   background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  
+
   /* -webkit-box-shadow: 0 0 5px #000; */
         /* box-shadow: 0 0 5px #000; */
   }
@@ -73,16 +73,16 @@ body {
 .overlay {
   width: 100%;
   height: 100%;
-  
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 1fr;
-  
+
   background: rgba(77, 77, 77, .9);
   /* color: $bg; */
   opacity: 0;
   transition: all 0.5s;
-  
+
   font-family: var(--font1);
 }
 
@@ -112,13 +112,13 @@ body {
  .title hr {
     display: block;
     width: 0;
-    
+
     border: none;
     border-bottom: solid 2px white;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left:20px;
-    
+
     transition: all .5s;
   }
 
@@ -126,7 +126,7 @@ body {
 .artby {
   font-size: 20px;
   line-height: 10px;
-  font-weight: bold;  
+  font-weight: bold;
   opacity: 0;
   transform: translateY(35px);
   transition: all 0.7s;
@@ -154,12 +154,12 @@ body {
 .container:hover .overlay .title {
     transform: translateY(0px);
   }
-  
+
 .container:hover .overlay hr {
     width: 75px;
     transition-delay: 0.4s;
   }
-  
+
 .container:hover .overlay .artby {
     transform: translateY(0px);
     transition-delay: 0.3s;
@@ -226,7 +226,7 @@ body {
 }
 .addart-form{
   position:fixed;
-  display:flex; 
+  display:flex;
   width:100vw;
   height:100vh;
   top:0;
@@ -239,11 +239,11 @@ body {
   transition:transform .5s ease-in-out;
   transform-origin:bottom ;
   /*display: none; */
- 
-} 
+
+}
 .addart-form-show{
   transform: scaleY(1)!important;
-  
+
 }
 .file-dummy {
   width: 100%;
@@ -254,7 +254,7 @@ body {
   border: 2px dashed rgba(255,255,255,0.2);
   text-align: center;
   transition: background 0.3s ease-in-out;
- 
+
 }
 .file-dummy .success {
   display: none;
@@ -289,5 +289,5 @@ input[type=file]:valid + .file-dummy  .default {
   font-family: Arial, Helvetica, sans-serif;
   font-size:25px;
   cursor: pointer;
-  
+
 }

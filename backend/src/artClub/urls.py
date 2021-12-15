@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
 from blogs.views import create_post
-from .views import render_home_page
+# from .views import render_home_page
 from .views import *
 
 urlpatterns = [
@@ -12,9 +12,15 @@ urlpatterns = [
     path('login/', login_view),
     path('logout/',logout_view),
     path('blogs/',include('blogs.urls')),
-    path('',render_home_page),
+    path('', index),
+    path('prints/',include('prints.urls')),
+    path('cart/', include('cart.urls')),
+    # path('',render_home_page),
     path('create/',create_post),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 if settings.DEBUG:
