@@ -32,10 +32,11 @@
      <i class="fa fa-plus fa-1" aria-hidden="true"></i>
     </div>
 
-    <!-- <div class="addart-form">
+    <div class="addart-form">
      
        
         <div class="close">X</div>
+        <div class="form_container">
         <form class="addart-actualform" action="/create/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <h1>Post a blog</h1>
@@ -66,7 +67,8 @@
     
              <div class="form-group">
               <label for="caption">Content </label>
-              <input type="text" name="content" id="caption" class="form-controll" required/>
+              <br>
+              <textarea name="content" cols="50" rows="10" id="content" required></textarea>
             </div>
             
             <div class="form-group form-button">
@@ -75,12 +77,12 @@
             </div>
             
           </form>
-             
-    </div> -->
+            </div> 
+    </div> 
 
+ 
 
-
-
+<!-- 
 
     <div class="addart-form">
      
@@ -91,7 +93,7 @@
         <form  action="/create/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <!-- <br><br><br> -->
-            <!-- <div class="upload_post_container"> -->
+            <!-- <div class="upload_post_container"> 
             <h1>Post a blog</h1>
             
             
@@ -138,6 +140,6 @@
           
           </form>
          
-      </div>
+      </div> -->
 </body>
 </html>
